@@ -10,6 +10,7 @@
   --box-shadow: rgba(0, 0, 0, 0.15);
   --hover-color: #2196f3;
   --button-hero-hover-color: #188ce8;
+  --portfolio-elements-gap: 20px;
 }
 /* font-family: 'Raleway', sans-serif;
 font-family: 'Roboto', sans-serif; */
@@ -48,6 +49,7 @@ img {
 .header {
   padding-top: 25px;
   padding-bottom: 25px;
+  border: 1px solid #ececec;
   background: var(--white-color);
 }
 .header-container {
@@ -284,18 +286,28 @@ img {
 }
 /*================================== PORTFOLIO.HTML ================================ */
 
+.button-nav-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+.button-nav-item {
+  margin-right: 8px;
+}
 .nav-button {
+  margin-bottom: 56px;
+  padding: 6px 22px;
   font-family: var(--primary-font-family);
   outline: none;
   border: 0;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
-  /* identical to box height, or 162% */
 
   text-align: center;
   letter-spacing: 0.03em;
 
+  border-radius: 4px;
   color: var(--basic-color-text);
   background: var(--button-background-color);
 }
@@ -308,33 +320,41 @@ img {
 .nav-button {
   cursor: pointer;
 }
+.portfolio-nav-container {
+  margin-bottom: 94px;
+}
+.portfolio-cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(-1 * var(--portfolio-elements-gap));
+  margin-bottom: calc(-1 * var(--portfolio-elements-gap));
+}
 .portfolio-elements {
-  width: 370px;
-  height: 404px;
-  left: 615px;
-  top: 696px;
+  flex-basis: calc(100% / 3 - var(--portfolio-elements-gap));
+  margin-right: var(--portfolio-elements-gap);
+  margin-bottom: var(--portfolio-elements-gap);
 
   background: var(--white-color);
   border: 1px solid var(--portfolio-elements);
   box-sizing: border-box;
 }
 .portfolio-elements > .title-elements {
+  margin: 20px 24px 4px 24px;
   font-family: var(--primary-font-family);
   font-weight: bold;
   font-size: 18px;
   line-height: 2;
-  /* identical to box height, or 200% */
 
   letter-spacing: 0.06em;
 
   color: var(--basic-color-text);
 }
 .portfolio-elements > .text-elements {
+  margin: 0px 24px 20px 24px;
   font-family: var(--primary-font-family);
   font-weight: normal;
   font-size: 16px;
   line-height: 1.87;
-  /* identical to box height, or 187% */
 
   letter-spacing: 0.03em;
 
