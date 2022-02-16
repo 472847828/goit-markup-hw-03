@@ -44,12 +44,15 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
-
+.section {
+  padding-bottom: 94px;
+  margin-top: 94px;
+}
 /* ==================================HEADER===================================== */
 .header {
   padding-top: 25px;
   padding-bottom: 25px;
-  border: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
   background: var(--white-color);
 }
 .header-container {
@@ -64,16 +67,13 @@ img {
 .nav-list {
   display: flex;
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 .nav-list-item:not(:last-child) {
   margin-right: 50px;
 }
-.contacts-mail {
+.nav-list-contact:not(:last-child) {
   margin-right: 50px;
 }
-
 .nav > .current {
   color: var(--hover-color);
 }
@@ -122,12 +122,13 @@ img {
 /* ===================================ГЕРОЙ================================== */
 /* index.html */
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
   background: var(--footer-backgraund-color);
   text-align: center;
 }
 
 .button-hero {
-  margin-bottom: 200px;
   padding: 10px 32px;
   border-radius: 4px;
   font-family: var(--primary-font-family);
@@ -155,8 +156,7 @@ img {
   cursor: pointer;
 }
 .hero-titile {
-  padding-top: 200px;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
   font-family: var(--primary-font-family);
   font-weight: 900;
   font-size: 44px;
@@ -171,16 +171,16 @@ img {
   color: var(--white-color);
 }
 /* ==================О НАС===================== */
-.container-advantage {
-  display: flex;
+.advantage-list {
   justify-content: space-between;
-  padding-top: 93px;
+  display: flex;
 }
-.advantage-section:not(:last-child) {
+.advantage-list-item:not(:last-child) {
   margin-right: 30px;
 }
 
 .advantage-title {
+  margin-bottom: 10px;
   font-family: var(--primary-font-family);
   font-weight: bold;
   font-size: 14px;
@@ -202,9 +202,13 @@ img {
   color: var(--complementary-color-text);
 }
 /* ==================ЧЕМ ЗАНИМАЕМСЯ====================== */
+.about-section-list {
+  display: flex;
+  justify-content: space-between;
+}
 .about-title {
   margin-bottom: 50px;
-  margin-top: 94px;
+
   font-family: var(--primary-font-family);
   font-weight: bold;
   font-size: 36px;
@@ -214,37 +218,31 @@ img {
 
   color: var(--basic-color-text);
 }
-.about-container {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 94px;
-  /* ================НАША КОМАНДА================= */
-}
-.team {
-  left: 0px;
-  top: 1449px;
-
-  background: var(--button-background-color);
-}
-.team-container {
-  display: flex;
-}
-.team-section-cards:not(:last-child) {
+.about-section-item:not(:last-child) {
   margin-right: 30px;
 }
+.team-text-container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+/* ================НАША КОМАНДА================= */
+
+.team {
+  background: var(--button-background-color);
+}
+
+.team-section-cards {
+  display: flex;
+  justify-content: space-between;
+}
 .team-cards {
-  margin-bottom: 94px;
-  width: 270px;
-  height: 368px;
-  left: 1115px;
-  top: 1635px;
-
   background: #ffffff;
-  /* material shadow v1 */
-
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+.team-cards:not(:last-child) {
+  margin-right: 30px;
 }
 .team-title {
   margin-bottom: 50px;
@@ -258,12 +256,10 @@ img {
   color: var(--basic-color-text);
 }
 .team-title-name {
-  padding-top: 30px;
   font-family: var(--primary-font-family);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
-  /* identical to box height */
 
   text-align: center;
   letter-spacing: 0.03em;
@@ -272,12 +268,11 @@ img {
 }
 .team-paragraph-work {
   padding-top: 10px;
-  padding-bottom: 30px;
+
   font-family: var(--primary-font-family);
   font-weight: normal;
   font-size: 16px;
   line-height: 1.18;
-  /* identical to box height */
 
   text-align: center;
   letter-spacing: 0.03em;
@@ -396,6 +391,7 @@ img {
 }
 .address {
   margin-top: 20px;
+  margin-bottom: 10px;
   font-family: var(--primary-font-family);
   font-style: normal;
   font-weight: normal;
@@ -407,10 +403,6 @@ img {
 
   color: var(--white-color);
 }
-.mail-address {
-  margin-top: 10px;
-}
-.tel-adress {
-  margin-top: 10px;
-  margin-bottom: 60px;
+.contacts-link:not(:last-child) {
+  margin-bottom: 10px;
 }
