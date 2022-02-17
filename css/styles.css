@@ -181,6 +181,9 @@ img {
 .advantage-list-item:not(:last-child) {
   margin-right: 30px;
 }
+.advantage-list-item {
+  width: 270px;
+}
 
 .advantage-title {
   margin-bottom: 10px;
@@ -317,6 +320,19 @@ img {
 .nav-button {
   cursor: pointer;
 }
+.title-portfolio-section {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 .portfolio-nav-container {
   margin-bottom: 94px;
 }
@@ -327,7 +343,6 @@ img {
   margin-top: calc(-1 * var(--portfolio-elements-gap));
 }
 .portfolio-elements {
-  box-sizing: border-box;
   flex-basis: calc(100% / 3 - var(--portfolio-elements-gap));
   margin-left: var(--portfolio-elements-gap);
   margin-top: var(--portfolio-elements-gap);
